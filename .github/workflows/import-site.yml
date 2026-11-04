@@ -1,0 +1,88 @@
+name: Import and deploy TPK Miami
+on:
+  push:
+    paths: ['.github/workflows/import-site.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  import:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract verified site source
+        shell: python
+        run: |
+          import hashlib, pathlib, stat, zipfile
+          root = pathlib.Path.cwd().resolve()
+          archive = root / 'TPK-Miami-Source.zip'
+          if archive.exists():
+              assert hashlib.sha256(archive.read_bytes()).hexdigest() == '15881998fb6b4999ad0f5f6f3525643fb572d9c685345ab912b9b066ac555d8e'
+              top = {'.gitignore','.npmrc','README.md','package.json','package-lock.json','vite.config.ts','tailwind.config.js','postcss.config.js','index.html','public/favicon.ico'}
+              with zipfile.ZipFile(archive) as z:
+                  names = set()
+                  assert len(z.infolist()) <= 100 and sum(i.file_size for i in z.infolist()) < 40000000
+                  for i in z.infolist():
+                      p = pathlib.PurePosixPath(i.filename)
+                      assert i.filename not in names
+                      names.add(i.filename)
+                      assert not p.is_absolute() and '..' not in p.parts and '\\' not in i.filename
+                      assert not stat.S_ISLNK(i.external_attr >> 16)
+                      assert i.filename in top or i.filename.startswith(('src/','public/media/','scripts/','verification/'))
+                      assert not any(s.startswith('.') for s in p.parts) or i.filename in {'.gitignore','.npmrc'}
+                      assert (root / i.filename).resolve().is_relative_to(root)
+                  for i in z.infolist():
+                      target = root / i.filename
+                      target.parent.mkdir(parents=True,exist_ok=True)
+                      target.write_bytes(z.read(i))
+              archive.unlink()
+              contact = root / 'src/components/ContactForm.tsx'
+              s = contact.read_text()
+              old = "const body = `Name: ${fields.get('name')}\\nEmail: ${fields.get('email')}\\n\\n${fields.get('message')}`;"
+              new = old[:-1] + ".replace(/\\r\\n|\\r|\\n/g, '\\r\\n');"
+              assert old in s
+              contact.write_text(s.replace(old,new))
+      - name: Commit source and media
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m 'Restore TPK Miami source and images'
+            git push origin HEAD:main
+          fi
+  build:
+    needs: import
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
