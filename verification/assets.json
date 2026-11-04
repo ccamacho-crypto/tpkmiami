@@ -1,0 +1,184 @@
+[
+  {
+    "path": "/airo-assets/images/logo/horizontal",
+    "source": "https://tpkmiami.com/airo-assets/images/logo/horizontal",
+    "bytes": 156304,
+    "contentType": "image/png",
+    "sha256": "d564bfa6b5bb2dc902adfe62d5aa71b43618ee674c002d837a4a8ac084529275"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/flyer-1",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/flyer-1",
+    "bytes": 753292,
+    "contentType": "image/jpeg",
+    "sha256": "d35c4b83693043d7df702904f199c05847fe205d2c47dde319460101cec2be52"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/flyer-10",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/flyer-10",
+    "bytes": 646660,
+    "contentType": "image/jpeg",
+    "sha256": "e81312602af8ca6904ece52067c097a9fe56ee81cd00654929aad5ab98924ad4"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/flyer-2",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/flyer-2",
+    "bytes": 404918,
+    "contentType": "image/jpeg",
+    "sha256": "38b85c9da0569e03d5ee9fdc37d22b8a16c917336f5f801235bd1f2cdee07674"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/flyer-3",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/flyer-3",
+    "bytes": 560359,
+    "contentType": "image/jpeg",
+    "sha256": "98b0b601073ca03ad7a6ce9c396170807f854db16ec3ec5a6e00bcde25597eda"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/flyer-4",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/flyer-4",
+    "bytes": 464468,
+    "contentType": "image/jpeg",
+    "sha256": "990d36d18ec64ffde2705708a7c11f16b6b4060e62904ae7417a7c5c6c179f0d"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/flyer-5",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/flyer-5",
+    "bytes": 566843,
+    "contentType": "image/jpeg",
+    "sha256": "5e9a1df80e9c3782e94b750c78e543c761f356beafe24e338ac290fc8e701a38"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/flyer-6",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/flyer-6",
+    "bytes": 308008,
+    "contentType": "image/jpeg",
+    "sha256": "e2eaee55202d92d3336785a8dbe4dbb7ff8ab9ebec8932060cf73b7f2536f89e"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/flyer-7",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/flyer-7",
+    "bytes": 507938,
+    "contentType": "image/jpeg",
+    "sha256": "7e0189503c960842bee2b1d0f21c8ab601c88619e3ab607609ab334951b537d2"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/flyer-8",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/flyer-8",
+    "bytes": 464155,
+    "contentType": "image/jpeg",
+    "sha256": "491b095dc55e7d2274968eb013b7a0d68df0ba1dae4b27101708d2f211112563"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/flyer-9",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/flyer-9",
+    "bytes": 445456,
+    "contentType": "image/jpeg",
+    "sha256": "e56c5bcbb65d7487c7f0453f35c4ba0de0d49e46c14401219b252e59332f2dd0"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/hero-tagline",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/hero-tagline",
+    "bytes": 37715,
+    "contentType": "image/png",
+    "sha256": "1aea151e3d16d3eb769f4f86669eca24e15e93c87897af20275c974ab0347d06"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/instagram-avatar",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/instagram-avatar",
+    "bytes": 847381,
+    "contentType": "image/jpeg",
+    "sha256": "27a899e33b1dd95453d622197ba4f03b2c85326f8d06d4c24bab3e84dfab2773"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/social-slide-1",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/social-slide-1",
+    "bytes": 212520,
+    "contentType": "image/jpeg",
+    "sha256": "5c0e101eebc51b6252ede4d62ad2c91cd9e2187f00a0ff059be17eac76ba7e7b"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/social-slide-2",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/social-slide-2",
+    "bytes": 349023,
+    "contentType": "image/jpeg",
+    "sha256": "3500884d7757985abcae0fcd65272d36d40b1f5d02bd26a9448d6267fa391653"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/social-slide-3",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/social-slide-3",
+    "bytes": 252516,
+    "contentType": "image/jpeg",
+    "sha256": "7145f263c9923d2e49d676d40be4b7265599c88a0f30b63694452355e881832c"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/social-slide-4",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/social-slide-4",
+    "bytes": 278708,
+    "contentType": "image/jpeg",
+    "sha256": "365267a4aada2ad7e198f479b5baadecea79cdf19cf8140e5e7519f4404d45a8"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/social-slide-5",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/social-slide-5",
+    "bytes": 202775,
+    "contentType": "image/jpeg",
+    "sha256": "332bd1c86fad7fe2484e1381a33e1eaa2094f7599228654e8c6230ac96483996"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/social-slide-6",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/social-slide-6",
+    "bytes": 280846,
+    "contentType": "image/jpeg",
+    "sha256": "e2c0f5c6abbcf3230aff6deba0901fc802b77d27a0b8f9710b7726e81f93bcc4"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/social-slide-7",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/social-slide-7",
+    "bytes": 254120,
+    "contentType": "image/jpeg",
+    "sha256": "dc982499bdbc9ca4de038254701d187c7c864c17e00a7e1008d29bfd934a6238"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/social-slide-8",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/social-slide-8",
+    "bytes": 250248,
+    "contentType": "image/jpeg",
+    "sha256": "62d039d93a75932d2333f2671d2ec8c9bc36d008e811bd137808e73e507337c6"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/social-slide-9",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/social-slide-9",
+    "bytes": 354538,
+    "contentType": "image/jpeg",
+    "sha256": "738784f4920aa93ecce89d845c254a8c35c8c1115a43ab165e46278ed66f8b2c"
+  },
+  {
+    "path": "/airo-assets/images/pages/home/tpktv-logo",
+    "source": "https://tpkmiami.com/airo-assets/images/pages/home/tpktv-logo",
+    "bytes": 5936653,
+    "contentType": "image/png",
+    "sha256": "1cb149e9b30d2c69134b03633c0cb85c403c6dd467299b9e5dbb1e2e60bb7b3d"
+  },
+  {
+    "path": "/airo-assets/images/uploads/background-95crtr613m-1791148729638-file-7la9vhbxcl",
+    "source": "https://tpkmiami.com/airo-assets/images/uploads/background-95crtr613m-1791148729638-file-7la9vhbxcl",
+    "bytes": 747736,
+    "contentType": "image/jpeg",
+    "sha256": "555f3df8e22c766c2553b855aee816af511a45e6cc03b79378246484e1ae02f3"
+  },
+  {
+    "path": "/airo-assets/images/uploads/background-95crtr613m-1791149077399-file-fgmbbrawqm",
+    "source": "https://tpkmiami.com/airo-assets/images/uploads/background-95crtr613m-1791149077399-file-fgmbbrawqm",
+    "bytes": 13315389,
+    "contentType": "image/png",
+    "sha256": "1e8c985d48f8618cdd4cbb58059477b8e2f331a0eedf501f70fd3bf77cfe5715"
+  },
+  {
+    "path": "/airo-assets/images/uploads/background-95crtr613m-1791154901397-file-wftwdc9gzm",
+    "source": "https://tpkmiami.com/airo-assets/images/uploads/background-95crtr613m-1791154901397-file-wftwdc9gzm",
+    "bytes": 602292,
+    "contentType": "image/jpeg",
+    "sha256": "c3594155d5db093b01bf1b0bcd4fb86154f1ee940de672bd0645ed65282eeca8"
+  }
+]

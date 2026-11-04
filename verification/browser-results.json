@@ -1,0 +1,14 @@
+{
+  "url": "http://127.0.0.1:5184/tpkmiami/",
+  "checks": [
+    "Main content renders with accessible H1",
+    "All 25 image elements decode successfully; CSS texture requested locally",
+    "All eight weekly events retained",
+    "Flyer carousel next control moves slides",
+    "Contact anchor and refresh retain repository subpath",
+    "Contact validation, explicit email fallback, and three video embeds present; no inquiry submitted",
+    "No horizontal overflow at 390/768/1024/1440px; mobile menu opens and closes after navigation"
+  ],
+  "pageErrors": [],
+  "failedLocalRequests": []
+}
