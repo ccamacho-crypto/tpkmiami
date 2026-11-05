@@ -34,9 +34,13 @@ The normal Pages workflow runs tests and builds `dist` on pushes to main. GitHub
 
 All 26 referenced image slots were retrieved from the live site and saved locally, then converted to WebP. Builds do not depend on the original media API. Source provenance and hashes are recorded in `verification/assets.json`.
 
-## Contact behavior — intentional difference
+## Contact behavior — Web3Forms direct submission
 
-GitHub Pages cannot run the exported platform's private contact API. The form validates fields and opens an email draft to **totalpartykillmiami@gmail.com**, the recipient explicitly present in the supplied export. The visitor must review and send in their email app. A direct email link is available when no email handler opens. The site never claims a message was delivered; there is no server-side delivery or storage. A managed delivery service can be connected separately later. No real inquiry was submitted during testing.
+The form posts to Web3Forms without opening an email app. The recipient and fallback address are **totalpartykillmiami@gmail.com**. On November 4, 2026, this linked email was verified in Web3Forms, selected as the sole recipient for TPK Miami Contact Form, saved and read back after a reload. The public access key identifies that form; changing the fallback address alone does not change provider routing.
+
+Browser mocks verify behavior, not live delivery. The website confirms provider acceptance only; inbox receipt requires confirmation by the inbox owner. See `verification/contact-update.md` for deployment and live-test evidence.
+
+The form preserves messages on failures/timeouts, prevents concurrent submissions, has a honeypot and displays provider acceptance rather than guaranteed delivery. Visitor contact details pass through Web3Forms; the form includes a privacy link. The access key is intentionally public, not a Gmail or private account credential. See https://docs.web3forms.com/getting-started/installation .
 
 ## External services and privacy
 

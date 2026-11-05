@@ -26,13 +26,19 @@ test('navigation remains within repository subpath', () => {
     assert.ok(source.includes("href: '#schedule'"));
   }
 });
-test('contact uses explicit source recipient and makes no server delivery claim', () => {
-  assert.equal(JSON.parse(read('src/lib/contact-form.config.json')).forms.contact.overrideEmail,'totalpartykillmiami@gmail.com');
+test('contact uses requested recipient and Web3Forms with honest acceptance messaging', () => {
+  const config = JSON.parse(read('src/lib/contact-form.config.json')).forms.contact;
+  assert.equal(config.overrideEmail,'totalpartykillmiami@gmail.com');
+  assert.equal(config.provider,'Web3Forms');
+  assert.match(config.accessKey,/^[a-f0-9-]{36}$/);
   const source=read('src/components/ContactForm.tsx');
   assert.match(source,/mailto:/);
-  assert.match(source,/encodeURIComponent\(body\)/);
-  assert.match(source,/nothing has been sent/);
-  assert.ok(!/fetch\(|axios|\/api\//.test(source));
+  assert.match(source,/https:\/\/api.web3forms.com\/submit/);
+  assert.match(source,/!response.ok \|\| result.success !== true/);
+  assert.match(source,/Submission accepted by our email service/);
+  assert.match(source,/inFlight.current/);
+  assert.match(source,/controller.abort\(\)/);
+  assert.ok(!source.includes('window.location.href'));
 });
 test('entry omits old platform scripts and preview is not indexed', () => {
   const source=read('index.html');

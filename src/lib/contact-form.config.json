@@ -1,9 +1,9 @@
 {
   "forms": {
     "contact": {
-      "brandId": "5fe2af62-3520-4201-a740-77675da32b24",
-      "categoryId": 92319784,
-      "overrideEmail": "totalpartykillmiami@gmail.com"
+      "overrideEmail": "totalpartykillmiami@gmail.com",
+      "provider": "Web3Forms",
+      "accessKey": "6c39d0ab-4d9a-41ab-8e41-1dfa98007126"
     }
   }
 }
