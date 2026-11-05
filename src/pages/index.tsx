@@ -5,6 +5,7 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import home from '../content/pages/home.json';
 import { asset } from '../lib/assets';
 import ContactForm from '@/components/ContactForm';
+import ShopSection from '@/components/ShopSection';
 
 const socialSlides = [
 { src: '/airo-assets/images/pages/home/social-slide-1', alt: 'TPK Miami event photo' },
@@ -274,10 +275,10 @@ export default function HomePage() {
         </section>
 
 
-        {/* Featured event section removed */}
+        <ShopSection />
 
         {/* ══════════════════════════════════════════
-                         TPKTV — YOUTUBE
+                         PHOTOS
                       ══════════════════════════════════════════ */}
         <section
           id="photos"

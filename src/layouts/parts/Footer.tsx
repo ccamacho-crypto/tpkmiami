@@ -1,6 +1,7 @@
 
 const footerLinks = [
   { label: 'Schedule', href: '#schedule' },
+  { label: 'Shop', href: '#shop' },
   { label: 'Photos', href: '#photos' },
   { label: 'Contact', href: '#contact' },
 ];
