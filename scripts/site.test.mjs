@@ -46,3 +46,30 @@ test('entry omits old platform scripts and preview is not indexed', () => {
   assert.match(source,/noindex, follow/);
   assert.match(source,/strict-origin-when-cross-origin/);
 });
+
+test('Shopify section sits directly before Photos and is linked in both navs', () => {
+  const page = read('src/pages/index.tsx');
+  assert.match(page, /import ShopSection from/);
+  assert.match(page, /<ShopSection \/>\s*\{\/\*[\s═]*PHOTOS[\s═]*\*\/\}\s*<section\s+id="photos"/);
+  for (const file of ['src/layouts/parts/Header.tsx', 'src/layouts/parts/Footer.tsx']) {
+    assert.match(read(file), /label: 'Shop', href: '#shop'/);
+  }
+});
+
+test('Shopify preview keeps checkout on the exact store and handles failure honestly', () => {
+  const source = read('src/components/ShopSection.tsx');
+  assert.match(source, /const STORE = 'https:\/\/tpkmiami\.myshopify\.com'/);
+  assert.match(source, /id="shop"/);
+  assert.match(source, /products\.json\?limit=12/);
+  assert.match(source, /credentials: 'omit'/);
+  assert.match(source, /controller\.abort\(\)/);
+  assert.match(source, /Retry product preview/);
+  assert.match(source, /rel="noopener noreferrer"/);
+  assert.match(source, /url\.hostname === 'cdn\.shopify\.com'/);
+  assert.ok(!/dangerouslySetInnerHTML|<iframe|accessToken|access_key/.test(source));
+});
+
+test('favicon uses the supplied logo asset under the correct Pages base path', () => {
+  assert.match(read('index.html'), /type="image\/svg\+xml" href="%BASE_URL%favicon-tpk.svg"/);
+  assert.match(read('public/favicon-tpk.svg'), /data:image\/png;base64,/);
+});
