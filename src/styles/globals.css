@@ -89,12 +89,12 @@
     /* Sidebar Colors */
     --sidebar: 43 41% 85%;
     --sidebar-foreground: 0 0% 4%;
-    --sidebar-primary: 33 53% 7%;
-    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 49 100% 48%;
     --sidebar-accent-foreground: 0 0% 34%;
     --sidebar-border: 33 53% 7%;
     --sidebar-ring: 33 53% 7%;
+    --sidebar-primary: 33 53% 7%;
+    --sidebar-primary-foreground: 0 0% 100%;
 
     /* Typography */
     --font-sans: "Permanent Marker", -apple-system, BlinkMacSystemFont, cursive;
@@ -107,7 +107,7 @@
     /* Button radius: the kit's radiusButton is written here at install time;
        the default matches shadcn `rounded-md` (calc(var(--radius) - 2px)) so a
        kit without a button radius renders unchanged. Consumed by the Button
-       `cva` via `rounded-[var(--radius-button)]` (AIROBUILD-3249). */
+       `cva` via `cva` (AIROBUILD-3249). */
     --radius-button: calc(var(--radius) - 2px);
 
     /* Spacing scale — every spacing utility takes these rungs: p-base, py-xxl,
@@ -173,7 +173,7 @@
   /* Defensive: a stray body H1 renders one step below .page-title and is
      visually distinct from the real page title above it. */
   .rich-text h1 {
-    font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+    font-size: clamp(1.5rem, 1.5vw + 1rem, 1.875rem);
     font-weight: 700;
     line-height: 1.3;
     color: hsl(var(--foreground));
@@ -181,20 +181,19 @@
     margin-bottom: 1rem;
   }
   .rich-text h2 {
-    font-size: clamp(1.5rem, 1vw + 0.9rem, 1.875rem);
+    font-size: clamp(1.5rem, 1.5vw + 1rem, 1.875rem);
     font-weight: 700;
     line-height: 1.3;
     color: hsl(var(--foreground));
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
   }
   .rich-text h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: clamp(1.25rem, 1vw + 0.9rem, 1.5rem);
+    font-weight: 700;
     color: hsl(var(--foreground));
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
   }
   .rich-text h4 {
     font-size: 1.125rem;
